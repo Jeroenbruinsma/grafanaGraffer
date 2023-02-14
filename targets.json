@@ -1,0 +1,11 @@
+[
+    {
+      "datasource": {
+        "type": "grafana-timestream-datasource",
+        "uid": "SmIo9aFVz"
+      },
+      "queryType": "raw",
+      "rawQuery": "Select measure_value::double as \"aps-e-ferry/datalogger/dl lifecounterf1\"\r\n,time\r\nfrom \"APS-test\".\"ramp_test\" where \r\nmeasure_name = 'aps-e-ferry/datalogger/dl lifecounterf1'\r\nAND $__timeFilter ",
+      "refId": "aps-e-ferry/datalogger/dl lifecounterf1 int"
+    }    
+  ]

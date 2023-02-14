@@ -1,0 +1,90 @@
+{
+    "datasource": {
+      "type": "grafana-timestream-datasource",
+      "uid": "SmIo9aFVz"
+    },
+    "description": "",
+    "fieldConfig": {
+      "defaults": {
+        "color": {
+          "mode": "thresholds"
+        },
+        "custom": {
+          "align": "auto",
+          "displayMode": "auto",
+          "inspect": false
+        },
+        "mappings": [],
+        "thresholds": {
+          "mode": "absolute",
+          "steps": [
+            {
+              "color": "green",
+              "value": null
+            },
+            {
+              "color": "red",
+              "value": 80
+            }
+          ]
+        }
+      },
+      "overrides": [
+        {
+          "matcher": {
+            "id": "byName",
+            "options": "startTime"
+          },
+          "properties": [
+            {
+              "id": "unit",
+              "value": "dateTimeAsIsoNoDateIfToday"
+            }
+          ]
+        },
+        {
+          "matcher": {
+            "id": "byName",
+            "options": "endTime"
+          },
+          "properties": [
+            {
+              "id": "unit",
+              "value": "dateTimeAsIsoNoDateIfToday"
+            }
+          ]
+        }
+      ]
+    },
+    "gridPos": {
+      "h": 11,
+      "w": 12,
+      "x": 12,
+      "y": 22
+    },
+    "id": 19,
+    "options": {
+      "footer": {
+        "fields": "",
+        "reducer": [
+          "sum"
+        ],
+        "show": false
+      },
+      "showHeader": true
+    },
+    "pluginVersion": "9.3.6",
+    "targets": [
+      {
+        "datasource": {
+          "type": "grafana-timestream-datasource",
+          "uid": "SmIo9aFVz"
+        },
+        "queryType": "raw",
+        "rawQuery": "SELECT measure_value::varchar as stateName, duration, startTime, endTime   FROM \"APS-test\".\"ramp_test_analytics\" where measure_name = 'mastersequence' ORDER BY time DESC LIMIT 10 ",
+        "refId": "A"
+      }
+    ],
+    "title": "State information",
+    "type": "table"
+  }

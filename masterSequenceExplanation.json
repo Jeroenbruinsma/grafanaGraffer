@@ -1,0 +1,26 @@
+{
+    "datasource": {
+      "type": "grafana-timestream-datasource",
+      "uid": "kldKmNu7k"
+    },
+    "description": "",
+    "gridPos": {
+      "h": 11,
+      "w": 4,
+      "x": 0,
+      "y": 22
+    },
+    "id": 1115,
+    "options": {
+      "code": {
+        "language": "plaintext",
+        "showLineNumbers": false,
+        "showMiniMap": false
+      },
+      "content": "# Master Sequence value meaning\n\n\n1     Idle  \n5     StepStroke (Anti-ice)  \n10    Prep  \n11    Prepos on  \n15    RFID on  \n16    RFID OFF  \n30    Ready to connect  \n35    PreConn  \n40    Connect  \n45    Arm reconnect   \n47    Box Retract  \n50    End Prepos  \n60    Homing  \n99    End  \n\n\n",
+      "mode": "markdown"
+    },
+    "pluginVersion": "9.3.6",
+    "title": "Tag explanation",
+    "type": "text"
+  }

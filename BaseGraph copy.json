@@ -1,0 +1,275 @@
+{
+  "datasource": {
+    "type": "grafana-timestream-datasource",
+    "uid": "SmIo9aFVz"
+  },
+  "fieldConfig": {
+    "defaults": {
+      "color": {
+        "mode": "palette-classic"
+      },
+      "custom": {
+        "axisCenteredZero": false,
+        "axisColorMode": "text",
+        "axisLabel": "",
+        "axisPlacement": "auto",
+        "barAlignment": 0,
+        "drawStyle": "line",
+        "fillOpacity": 0,
+        "gradientMode": "none",
+        "hideFrom": {
+          "legend": false,
+          "tooltip": false,
+          "viz": false
+        },
+        "lineInterpolation": "linear",
+        "lineWidth": 1,
+        "pointSize": 7,
+        "scaleDistribution": {
+          "type": "linear"
+        },
+        "showPoints": "always",
+        "spanNulls": false,
+        "stacking": {
+          "group": "A",
+          "mode": "none"
+        },
+        "thresholdsStyle": {
+          "mode": "off"
+        }
+      },
+      "mappings": [],
+      "thresholds": {
+        "mode": "absolute",
+        "steps": [
+          {
+            "color": "green",
+            "value": null
+          },
+          {
+            "color": "red",
+            "value": 80
+          }
+        ]
+      }
+    },
+    "overrides": [
+      {
+        "matcher": {
+          "id": "byName",
+          "options": "aps-e-ferry/support/sup2 pilot ok(Connected)"
+        },
+        "properties": [
+          {
+            "id": "custom.axisPlacement",
+            "value": "right"
+          },
+          {
+            "id": "custom.lineInterpolation",
+            "value": "stepAfter"
+          }
+        ]
+      },
+      {
+        "matcher": {
+          "id": "byName",
+          "options": "aps-e-ferry/laser/laser b10 right"
+        },
+        "properties": [
+          {
+            "id": "custom.axisPlacement",
+            "value": "right"
+          }
+        ]
+      },
+      {
+        "matcher": {
+          "id": "byName",
+          "options": "aps-e-ferry/laser/laser inmovement_on"
+        },
+        "properties": [
+          {
+            "id": "custom.axisPlacement",
+            "value": "right"
+          }
+        ]
+      },
+      {
+        "matcher": {
+          "id": "byName",
+          "options": "aps-e-ferry/laser/laser b8 right"
+        },
+        "properties": [
+          {
+            "id": "custom.axisPlacement",
+            "value": "right"
+          }
+        ]
+      },
+      {
+        "matcher": {
+          "id": "byName",
+          "options": "aps-e-ferry/laser/laser b9 left"
+        },
+        "properties": [
+          {
+            "id": "custom.axisPlacement",
+            "value": "right"
+          }
+        ]
+      },
+      {
+        "matcher": {
+          "id": "byName",
+          "options": "aps-e-ferry/laser/laser b10 right"
+        },
+        "properties": [
+          {
+            "id": "custom.axisPlacement",
+            "value": "right"
+          }
+        ]
+      },
+      {
+        "matcher": {
+          "id": "byName",
+          "options": "aps-e-ferry/mastersequence/sequenceon"
+        },
+        "properties": [
+          {
+            "id": "custom.axisPlacement",
+            "value": "right"
+          }
+        ]
+      },
+      {
+        "matcher": {
+          "id": "byName",
+          "options": "aps-e-ferry/laser/laser outmovement_on"
+        },
+        "properties": [
+          {
+            "id": "custom.axisPlacement",
+            "value": "right"
+          }
+        ]
+      },
+      {
+        "matcher": {
+          "id": "byName",
+          "options": "aps-e-ferry/2- modbus shore/bool0_1-ship_connect"
+        },
+        "properties": [
+          {
+            "id": "custom.axisPlacement",
+            "value": "right"
+          }
+        ]
+      },
+      {
+        "matcher": {
+          "id": "byName",
+          "options": "aps-e-ferry/2- modbus shore/bool0_2-ship_disconnect"
+        },
+        "properties": [
+          {
+            "id": "custom.axisPlacement",
+            "value": "right"
+          }
+        ]
+      },
+      {
+        "matcher": {
+          "id": "byName",
+          "options": "aps-e-ferry/2- modbus shore/bool0_0-ship_preposition"
+        },
+        "properties": [
+          {
+            "id": "custom.axisPlacement",
+            "value": "right"
+          }
+        ]
+      },
+      {
+        "matcher": {
+          "id": "byName",
+          "options": "aps-e-ferry/rfid/rfid sup bit funnel 1 ok"
+        },
+        "properties": [
+          {
+            "id": "custom.axisPlacement",
+            "value": "right"
+          }
+        ]
+      },
+      {
+        "matcher": {
+          "id": "byName",
+          "options": "aps-e-ferry/counter/counter release"
+        },
+        "properties": [
+          {
+            "id": "custom.axisPlacement",
+            "value": "right"
+          }
+        ]
+      },
+      {
+        "__systemRef": "hideSeriesFrom",
+        "matcher": {
+          "id": "byNames",
+          "options": {
+            "mode": "exclude",
+            "names": [
+              "aps-e-ferry/datalogger/dl lifecounterf1"
+            ],
+            "prefix": "All except:",
+            "readOnly": true
+          }
+        },
+        "properties": [
+          {
+            "id": "custom.hideFrom",
+            "value": {
+              "legend": false,
+              "tooltip": false,
+              "viz": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "gridPos": {
+    "h": 11,
+    "w": 8,
+    "x": 8,
+    "y": 0
+  },
+  "id": 21,
+  "options": {
+    "legend": {
+      "calcs": [],
+      "displayMode": "list",
+      "placement": "bottom",
+      "showLegend": true
+    },
+    "tooltip": {
+      "mode": "single",
+      "sort": "none"
+    }
+  },
+  "targets": [
+    {
+      "datasource": {
+        "type": "grafana-timestream-datasource",
+        "uid": "SmIo9aFVz"
+      },
+      "queryType": "raw",
+      "rawQuery": "Select measure_value::double as \"aps-e-ferry/datalogger/dl lifecounterf1\"\r\n,time\r\nfrom \"APS-test\".\"ramp_test\" where \r\nmeasure_name = 'aps-e-ferry/datalogger/dl lifecounterf1'\r\nAND $__timeFilter ",
+      "refId": "aps-e-ferry/datalogger/dl lifecounterf1 int"
+    }
+  ],
+  "title": 0,
+  "type": "timeseries"
+}
